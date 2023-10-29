@@ -47,14 +47,19 @@ void display_Products(struct Product products[], int productCount)
     }
 }
 
+//Function to delete products kay wa man forever haha
 void delete_Product(struct Product products[], int productCount)
 {
     int deleteProduct;
+    
+    //The display function is called, natural para makita it list it products HAHA
     display_Products(products, productCount);
 
+    //Prompt the user to select the product
     printf("\nEnter the Number of Product to Delete: ");
     scanf("%d", &deleteProduct);
 
+    //Boolean to know if legit ba ang iyung input HAHA
     if (deleteProduct >= 1 && deleteProduct <= productCount)
     {
         products[deleteProduct - 1].isAvailable = 0;
@@ -62,7 +67,7 @@ void delete_Product(struct Product products[], int productCount)
     }
     else
     {
-        printf("\nInvalid Teh...\n");
+        printf("\nInvalid Teh...\n"); //OF course naman
     }
 }
 
@@ -78,13 +83,14 @@ void update_Price(struct Product products[], int productCount)
     if (choice >= 1 && choice <= productCount)
     {
         //Allocate data for product and change the data for product
+        //Wow pointers haha
         printf("\nEnter New Price for %s: ", products[choice - 1].productName);
         scanf("%f", &products[choice - 1].price);
         printf("\nPrice Updated Successfully!\n");
     }
     else
     {
-        printf("\nError Teh...\n");
+        printf("\nError Teh...\n"); //Of course again
     }
 }
 
@@ -104,8 +110,8 @@ void saveProductsToFile(struct Product products[], int productCount)
         fprintf(file, "%s %.2f %d\n", products[i].productName, products[i].price, products[i].isAvailable);
     }
 
-    fclose(file);
-    printf("Data has been saved to the file, Naks naman.\n");
+    fclose(file); //To close file natural HAHA
+    printf("Data has been saved to the file, Naks naman.\n"); 
 }
 
 // Load products from a file
