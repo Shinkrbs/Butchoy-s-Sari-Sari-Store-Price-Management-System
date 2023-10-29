@@ -1,0 +1,7 @@
+Combi 7.00 1
+Rinbee 9.00 1
+Tinapa 26.00 0
+Tinapa 67.00 0
+Red 45.00 0
+Tinapa 25.00 1
+Red 67.00 0
